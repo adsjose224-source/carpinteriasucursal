@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Taller | Madera & Diseño</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layouts.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/motion.css">
+</head>
+<body>
+    <header class="header" style="mix-blend-mode: normal; color: var(--clr-dark);">
+        <a href="index.html" class="nav__logo">
+            <img src="assets/img/logo.jpg" alt="Logo" style="filter: none;" />
+        </a>
+        <nav>
+            <ul class="nav__list">
+                <li><a href="taller.html" class="nav__link">El Taller</a></li>
+                <li><a href="coleccion.html" class="nav__link">Colección</a></li>
+                <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding-top: var(--space-xxl);">
+        <section class="container" style="padding-bottom: var(--space-xl);">
+            <div class="fade-in-up">
+                <h1 style="font-size: var(--text-h1); margin-bottom: var(--space-l); max-width: 800px;">Donde la materia bruta encuentra su propósito.</h1>
+            </div>
+            
+            <div class="grid-editorial">
+                <div class="col-left-5 fade-in-up" style="transition-delay: 0.2s;">
+                    <p style="font-size: 1.2rem; margin-bottom: var(--space-m);">Fundado en la creencia de que las cosas buenas toman tiempo. Seleccionamos personalmente cada tablón, asegurando que provenga de fuentes sustentables y se seque a la perfección antes de que un formón lo toque.</p>
+                </div>
+                <div class="col-right-7 fade-in-up" style="transition-delay: 0.4s;">
+                    <img src="assets/img/port2.jpg" alt="Carpintero trabajando" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container grid-editorial">
+            <div class="col-left-5">
+                <h3 class="footer__title">Madera & Diseño</h3>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

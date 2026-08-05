@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIGNUM | Obras Selectas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layouts.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/motion.css">
+</head>
+<body>
+    <div class="film-grain"></div>
+
+    <div class="preloader">
+        <div class="preloader__text">OBRAS</div>
+    </div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="site-header">
+        <a href="index.html" class="brand-logo">LIGNUM</a>
+        <nav>
+            <ul style="display: flex; gap: 2rem;">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="studio.html" class="nav-link">Estudio</a></li>
+                <li><a href="projects.html" class="nav-link" style="color: var(--clr-accent);">Obras</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main>
+                <!-- Header Section -->
+                <section class="section" style="padding-top: 15vh;">
+                    <div class="container">
+                        <h1 class="hero-title reveal-text" style="font-size: var(--text-3xl);">
+                            <span>Archivo</span><br>
+                            <span class="delay-1">Estructural</span>
+                        </h1>
+                        <p class="hero-subtitle reveal-up delay-2">Piezas Únicas / 2024 - 2026</p>
+                    </div>
+                </section>
+
+                <!-- Masonry Gallery Concept -->
+                <section class="section section--no-pad-top">
+                    <div class="container">
+                        <div class="grid-2">
+                            <a href="#" class="project-card reveal-up" style="aspect-ratio: 16/9;">
+                                <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=1200&auto=format&fit=crop" alt="Mesa monolítica de nogal" class="project-card__img">
+                                <div class="project-card__overlay">
+                                    <h3 class="project-card__title">Monolito I</h3>
+                                    <span class="project-card__meta">Mesa de Comedor / Nogal Negro</span>
+                                </div>
+                            </a>
+                            <div class="reveal-up delay-1" style="display: flex; flex-direction: column; justify-content: center; padding: 0 var(--space-xl);">
+                                <h3 style="font-size: var(--text-2xl); color: var(--clr-accent);">01</h3>
+                                <h2>El peso de la gravedad</h2>
+                                <p>Monolito I fue concebida a partir de un tronco de nogal caído por causas naturales durante una tormenta en 2023. La base está calcinada usando la técnica Shou Sugi Ban para asegurar una durabilidad infinita.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid-2" style="margin-top: var(--space-2xl);">
+                            <div class="reveal-up" style="display: flex; flex-direction: column; justify-content: center; padding: 0 var(--space-xl); order: 2;">
+                                <h3 style="font-size: var(--text-2xl); color: var(--clr-accent);">02</h3>
+                                <h2>Anatomía Expuesta</h2>
+                                <p>Inspirada en el brutalismo soviético, esta silla no intenta ocultar sus uniones. Los ensambles de cola de milano gigantes son el punto focal del diseño, celebrando la tensión estructural.</p>
+                            </div>
+                            <a href="#" class="project-card reveal-up delay-1" style="aspect-ratio: 3/4; order: 1;">
+                                <img src="https://images.unsplash.com/photo-1544457070-4cd773b4d71e?q=80&w=1200&auto=format&fit=crop" alt="Silla escultural de roble" class="project-card__img">
+                                <div class="project-card__overlay">
+                                    <h3 class="project-card__title">Sombra y Hueso</h3>
+                                    <span class="project-card__meta">Silla Escultural / Roble Quemado</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="grid-2" style="margin-top: var(--space-2xl);">
+                            <a href="#" class="project-card reveal-up" style="aspect-ratio: 1/1;">
+                                <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?q=80&w=1200&auto=format&fit=crop" alt="Gabinete de fresno" class="project-card__img">
+                                <div class="project-card__overlay">
+                                    <h3 class="project-card__title">Vaso de Luz</h3>
+                                    <span class="project-card__meta">Gabinete / Fresno Blanqueado</span>
+                                </div>
+                            </a>
+                            <div class="reveal-up delay-1" style="display: flex; flex-direction: column; justify-content: center; padding: 0 var(--space-xl);">
+                                <h3 style="font-size: var(--text-2xl); color: var(--clr-accent);">03</h3>
+                                <h2>Textura Visual</h2>
+                                <p>El tratamiento del fresno blanqueado contrasta radicalmente con nuestros trabajos habituales. La intención era crear una pieza que absorbiera la luz ambiental en lugar de reflejarla, generando una presencia silenciosa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="site-footer">
+                <div class="container">
+                    <div class="footer-top">
+                        <div class="reveal-up">
+                            <h2 style="font-size: var(--text-3xl);">Hablemos de tu<br>próxima obsesión.</h2>
+                            <p style="margin-top: 2rem;">Trabajamos por comisión. Cupos limitados para el Q4 2026.</p>
+                            <a href="mailto:comisiones@lignum.com" class="btn-magnetic" style="margin-top: 2rem; color: var(--clr-bg); background: var(--clr-accent);">Iniciar Conversación</a>
+                        </div>
+                        <div class="reveal-up delay-1">
+                            <h4 style="margin-bottom: 1rem; color: var(--clr-accent);">Navegación</h4>
+                            <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                                <li><a href="studio.html" class="nav-link">Estudio</a></li>
+                                <li><a href="projects.html" class="nav-link">Obras</a></li>
+                            </ul>
+                        </div>
+                        <div class="reveal-up delay-2">
+                            <h4 style="margin-bottom: 1rem; color: var(--clr-accent);">Contacto</h4>
+                            <p>Taller Sur, Distrito de Diseño.<br>Avenida de las maderas 404.<br>Madrid, España.</p>
+                        </div>
+                    </div>
+                    <div class="footer-bottom reveal-up delay-3">
+                        <p>&copy; 2026 LIGNUM Ebanistería de Autor. Todos los derechos reservados.</p>
+                        <p>Diseñado con brutalidad. Codificado con precisión.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

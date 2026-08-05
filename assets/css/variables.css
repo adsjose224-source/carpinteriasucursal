@@ -1,0 +1,29 @@
+:root {
+    /* Paleta Premium Editorial */
+    --clr-dark: #12100E; /* Negro terroso profundo */
+    --clr-light: #F5F2EB; /* Blanco hueso / papel cálido */
+    --clr-accent: #8E7057; /* Marrón bronce / madera natural */
+    --clr-surface: #EFEADD; /* Superficie para contraste sutil */
+    
+    /* Tipografía */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Escala Modular Gigante */
+    --text-display: clamp(4rem, 12vw, 10rem);
+    --text-h1: clamp(3rem, 8vw, 6rem);
+    --text-h2: clamp(2rem, 5vw, 4rem);
+    --text-p: 1.125rem;
+    
+    /* Espaciado de Lujo */
+    --space-s: 1rem;
+    --space-m: 2.5rem;
+    --space-l: 5rem;
+    --space-xl: 10rem;
+    --space-xxl: 15rem;
+    
+    /* Transiciones */
+    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+    --transition-slow: 1.2s var(--ease-out-expo);
+    --transition-fast: 0.4s var(--ease-out-expo);
+}

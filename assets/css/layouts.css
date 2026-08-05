@@ -1,0 +1,95 @@
+/* Contenedor Principal */
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 4vw;
+}
+
+/* Header Rústico y Moderno */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--space-m) 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    mix-blend-mode: difference;
+    color: #fff; /* El difference lo hará negro sobre blanco y blanco sobre imagen */
+}
+
+.nav__logo img {
+    height: 40px;
+    filter: invert(1); /* Para que el logo se vea blanco con mix-blend-mode difference, dependiendo del original */
+}
+
+.nav__logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.nav__list {
+    display: flex;
+    gap: var(--space-m);
+}
+
+.nav__link {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transform: translateX(-101%);
+    transition: transform var(--transition-fast);
+}
+
+.nav__link:hover::after {
+    transform: translateX(0);
+}
+
+/* Grid Editorial */
+.grid-editorial {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.col-left-7 { grid-column: 1 / 8; }
+.col-right-5 { grid-column: 8 / -1; }
+.col-left-5 { grid-column: 1 / 6; }
+.col-right-7 { grid-column: 6 / -1; }
+
+@media (max-width: 1024px) {
+    .grid-editorial { display: flex; flex-direction: column; }
+    .col-left-7, .col-right-5, .col-left-5, .col-right-7 { width: 100%; margin-bottom: var(--space-m); }
+}
+
+/* Footer Alto Contraste */
+.footer {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    padding: var(--space-xl) 0 var(--space-m);
+    margin-top: var(--space-xxl);
+}
+
+.footer__title {
+    font-size: var(--text-h2);
+    margin-bottom: var(--space-l);
+    color: var(--clr-accent);
+}

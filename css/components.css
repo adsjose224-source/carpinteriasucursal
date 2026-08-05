@@ -1,0 +1,202 @@
+/* ==========================================================================
+   Components - LIGNUM
+   ========================================================================== */
+
+/* Brand Logo */
+.brand-logo {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  z-index: 100;
+}
+
+/* Navigation Links */
+.nav-link {
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--clr-accent);
+  transform: translateX(-101%);
+  transition: transform var(--transition-fast);
+}
+.nav-link:hover::after {
+  transform: translateX(0);
+}
+
+/* Magnetic CTA Button */
+.btn-magnetic {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 3rem;
+  background-color: transparent;
+  border: 1px solid var(--clr-accent);
+  color: var(--clr-accent);
+  border-radius: 50px;
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  overflow: hidden;
+  transition: color var(--transition-fast);
+  z-index: 1;
+}
+.btn-magnetic::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-accent);
+  transition: transform var(--transition-medium);
+  border-radius: 50%;
+  z-index: -1;
+}
+.btn-magnetic:hover {
+  color: var(--clr-bg);
+}
+.btn-magnetic:hover::before {
+  transform: translateY(-100%);
+  border-radius: 0;
+}
+
+/* Solid Button */
+.btn-solid {
+  background-color: var(--clr-text);
+  color: var(--clr-bg);
+  border-color: var(--clr-text);
+}
+.btn-solid::before {
+  background-color: var(--clr-bg);
+}
+.btn-solid:hover {
+  color: var(--clr-text);
+}
+
+/* Project Card (Hover 3D concept) */
+.project-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+}
+.project-card__img {
+  width: 100%;
+  height: 100%;
+  transition: transform var(--transition-slow);
+}
+.project-card:hover .project-card__img {
+  transform: scale(1.05);
+}
+.project-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 14, 12, 0.9) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-md);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-medium);
+}
+.project-card:hover .project-card__overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+.project-card__title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-xs);
+  color: var(--clr-text);
+}
+.project-card__meta {
+  font-size: var(--text-sm);
+  color: var(--clr-accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Huge Hero Title */
+.hero-title {
+  font-size: var(--text-hero);
+  line-height: 0.85;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: difference;
+}
+.hero-subtitle {
+  font-size: var(--text-lg);
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--clr-text-muted);
+  margin-top: var(--space-md);
+}
+
+/* Background Image wrapper */
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%; /* For parallax */
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* Numbered Step */
+.step {
+  border-top: var(--border-subtle);
+  padding: var(--space-md) 0;
+}
+.step-number {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  color: var(--clr-accent);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+
+/* Custom Cursor */
+.cursor-dot, .cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+}
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--clr-accent);
+}
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--clr-text);
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
+}
+.cursor-outline.hovered {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(232, 229, 225, 0.1);
+  backdrop-filter: blur(2px);
+  border-color: transparent;
+}

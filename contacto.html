@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Madera & Diseño</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layouts.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/motion.css">
+</head>
+<body>
+    <header class="header" style="mix-blend-mode: normal; color: var(--clr-dark);">
+        <a href="index.html" class="nav__logo">
+            <img src="assets/img/logo.jpg" alt="Logo" style="filter: none;" />
+        </a>
+        <nav>
+            <ul class="nav__list">
+                <li><a href="taller.html" class="nav__link">El Taller</a></li>
+                <li><a href="coleccion.html" class="nav__link">Colección</a></li>
+                <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding-top: var(--space-xxl); padding-bottom: var(--space-xl);">
+        <section class="container grid-editorial">
+            <div class="col-left-5 fade-in-up">
+                <h1 style="font-size: var(--text-h1); margin-bottom: var(--space-s);">Iniciemos un Proyecto.</h1>
+                <p style="margin-bottom: var(--space-l); color: rgba(18,16,14,0.7);">Cuéntanos sobre tu espacio y lo que imaginas.</p>
+                
+                <div style="margin-bottom: var(--space-m);">
+                    <p style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em; color: rgba(18,16,14,0.5);">Estudio</p>
+                    <p>Av. Los Robles 452, Distrito de Diseño.</p>
+                </div>
+            </div>
+            
+            <div class="col-right-7 fade-in-up" style="transition-delay: 0.2s;">
+                <form action="#">
+                    <div class="form-line">
+                        <input type="text" id="name" required>
+                        <label for="name">Nombre Completo</label>
+                    </div>
+                    <div class="form-line">
+                        <input type="email" id="email" required>
+                        <label for="email">Correo Electrónico</label>
+                    </div>
+                    <div class="form-line">
+                        <textarea id="message" rows="1" required style="resize:none; padding-top: 2rem;"></textarea>
+                        <label for="message">Detalles del proyecto</label>
+                    </div>
+                    <button type="submit" class="btn" style="margin-top: var(--space-m);">Enviar Solicitud</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+/* Máscaras para revelado de texto */
+.reveal-text-mask {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.reveal-text {
+    display: inline-block;
+    transform: translateY(110%);
+    transition: transform var(--transition-slow);
+}
+
+.is-inview .reveal-text {
+    transform: translateY(0);
+}
+
+/* Parallax Image Wrapper */
+.img-parallax-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.img-parallax {
+    transform: scale(1.1);
+    transition: transform 1.5s var(--ease-out-expo);
+    will-change: transform;
+}
+
+/* Fade general */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s var(--ease-out-expo);
+}
+
+.is-inview .fade-in-up,
+.is-inview.fade-in-up {
+    opacity: 1;
+    transform: translateY(0);
+}

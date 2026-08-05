@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Motion & Animation - LIGNUM
+   ========================================================================== */
+
+/* Film Grain Overlay for premium feel */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.04;
+  background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+}
+
+/* Smooth Scroll Wrapper */
+#smooth-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+#smooth-content {
+  will-change: transform;
+}
+
+/* Reveal Animations (Triggered by IntersectionObserver class .is-inview) */
+
+/* Fade Up */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+.reveal-up.is-inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* Mask Text Reveal */
+.reveal-text {
+  overflow: hidden;
+  display: block;
+}
+.reveal-text > span {
+  display: block;
+  transform: translateY(110%);
+  transition: transform var(--transition-slow);
+}
+.reveal-text.is-inview > span {
+  transform: translateY(0);
+}
+
+/* Line expansion */
+.reveal-line {
+  width: 0;
+  height: 1px;
+  background-color: var(--clr-accent);
+  transition: width var(--transition-slow);
+}
+.reveal-line.is-inview {
+  width: 100%;
+}
+
+/* Image Parallax Container */
+.parallax-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.parallax-img {
+  will-change: transform;
+  transform: scale(1.1); /* Prevent edges showing during scroll */
+}
+
+/* Loader */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background-color: var(--clr-bg);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s var(--ease-out-expo);
+}
+.preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.preloader__text {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  color: var(--clr-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}

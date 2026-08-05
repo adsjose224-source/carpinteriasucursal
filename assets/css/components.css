@@ -1,0 +1,93 @@
+/* Botones Magnéticos / Premium */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 3rem;
+    border: 1px solid var(--clr-dark);
+    background: transparent;
+    color: var(--clr-dark);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.4s ease;
+    border-radius: 50px;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-dark);
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.2, 1);
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.btn:hover {
+    color: var(--clr-light);
+}
+
+.btn:hover::before {
+    transform: translateY(-100%);
+}
+
+.btn--light {
+    border-color: var(--clr-light);
+    color: var(--clr-light);
+}
+
+.btn--light::before {
+    background-color: var(--clr-light);
+}
+
+.btn--light:hover {
+    color: var(--clr-dark);
+}
+
+/* Formulario Minimalista */
+.form-line {
+    position: relative;
+    margin-bottom: var(--space-m);
+}
+
+.form-line input, .form-line textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(18, 16, 14, 0.3);
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    color: var(--clr-dark);
+    outline: none;
+    transition: border-color var(--transition-fast);
+}
+
+.form-line input:focus, .form-line textarea:focus {
+    border-bottom-color: var(--clr-accent);
+}
+
+.form-line label {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    font-size: 1.1rem;
+    color: rgba(18, 16, 14, 0.6);
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.form-line input:focus ~ label,
+.form-line input:valid ~ label,
+.form-line textarea:focus ~ label,
+.form-line textarea:valid ~ label {
+    top: -10px;
+    font-size: 0.8rem;
+    color: var(--clr-accent);
+}
